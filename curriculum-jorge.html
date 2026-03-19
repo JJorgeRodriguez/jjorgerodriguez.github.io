@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae | Jorge Rodríguez</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Curriculum Vitae de Jorge Rodríguez, Senior Infrastructure Architect y Oracle DBA Expert. Ourense, Galicia.">
+    <meta name="keywords" content="CV, Jorge Rodríguez, Senior Infrastructure Architect, Oracle DBA, DevOps, Ourense, Ansible">
+    <meta name="author" content="Jorge Rodríguez Fernández">
+    <meta name="robots" content="index, follow">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #38bdf8;
+            --text-main: #1e293b;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+        }
+
+        @media print {
+            .no-print { display: none; }
+            body { background: white !important; }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            line-height: 1.5;
+            color: var(--text-main);
+            background: #f8fafc;
+            padding: 2rem;
+        }
+
+        .cv-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cv-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, var(--accent), #818cf8);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 2.5rem;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 2rem;
+        }
+
+        .header-main h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .header-main h2 {
+            font-size: 1.25rem;
+            color: var(--accent);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-info {
+            text-align: right;
+            color: var(--text-light);
+        }
+
+        .contact-info p {
+            margin-bottom: 0.25rem;
+            font-size: 0.95rem;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.25rem;
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
+        }
+
+        .exp-item, .edu-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .item-header strong {
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+
+        .item-header span {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--accent);
+            background: #f0f9ff;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .company {
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 1rem;
+        }
+
+        ul li {
+            position: relative;
+            margin-bottom: 0.4rem;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        ul li::before {
+            content: "•";
+            color: var(--accent);
+            position: absolute;
+            left: -1rem;
+            font-weight: bold;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .skill-cat strong {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--primary);
+        }
+
+        .skill-cat p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            border-top: 1px solid var(--border);
+            padding-top: 1.5rem;
+        }
+
+        .btn-print {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+    <a href="javascript:window.print()" class="btn-print no-print">Imprimir / Guardar PDF</a>
+
+    <div class="cv-container">
+        <header>
+            <div class="header-main">
+                <h1>J. Jorge Rodríguez</h1>
+                <h2>Senior Infrastructure Architect</h2>
+            </div>
+            <div class="contact-info">
+                <p>Ourense</p>
+                <p>todotutto.wordpress.com</p>
+                <p>linkedin.com/in/jjorgerodriguez</p>
+                <p>github.com/jjorgerodriguez</p>
+            </div>
+        </header>
+
+        <section>
+            <h3>Perfil Profesional</h3>
+            <p style="color: var(--text-light); font-size: 0.95rem;">
+                Arquitecto de infraestructuras con más de 12 años de trayectoria técnica liderando sistemas críticos y bases de datos Oracle a escala global. Especializado en la transición de entornos legacy a arquitecturas automatizadas (DevOps) y Cloud, garantizando alta disponibilidad y escalabilidad para soluciones ERP internacionales.
+            </p>
+        </section>
+
+        <section>
+            <h3>Experiencia Destacada</h3>
+            <div class="exp-item">
+                <div class="item-header">
+                    <strong>Senior Systems and Networks Administrator</strong>
+                    <span>2013 — Presente</span>
+                </div>
+                <span class="company">EDISA (Tecnologías de la Información)</span>
+                <ul>
+                    <li>Arquitectura y gestión de infraestructura crítica para Libra ERP en +30 países.</li>
+                    <li>Administración avanzada de Oracle Database (Instalación, Tuning, Backup, ASM).</li>
+                    <li>Liderazgo en automatización con Ansible (IaC) para aprovisionamiento y parcheado.</li>
+                    <li>Gestión de infraestructuras híbridas y migraciones Cloud (OCI / AWS).</li>
+                    <li>Administración de middleware WebLogic y servidores de aplicaciones críticos.</li>
+                </ul>
+            </div>
+            <div class="exp-item">
+                <div class="item-header">
+                    <strong>Systems Administrator (Internship)</strong>
+                    <span>Abr 2013 — Jul 2013</span>
+                </div>
+                <span class="company">INSA (Grupo IBM)</span>
+                <ul>
+                    <li>Soporte técnico y mantenimiento de sistemas operativos empresariales.</li>
+                    <li>Gestión de incidencias y monitorización de red.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h3>Certificaciones Oficiales</h3>
+            <div class="cert-grid">
+                <div class="exp-item">
+                    <div class="item-header">
+                        <strong>Red Hat Ansible Advanced (AU374)</strong>
+                        <span>2025</span>
+                    </div>
+                    <p style="font-size: 0.9rem; color: var(--text-light);">Especialista en automatización avanzada y escalabilidad con Ansible Automation Platform.</p>
+                </div>
+                <div class="exp-item">
+                    <div class="item-header">
+                        <strong>MS-900: M365 Fundamentals</strong>
+                        <span>2024</span>
+                    </div>
+                    <p style="font-size: 0.9rem; color: var(--text-light);">Microsoft Certified Fundamentals para soluciones en la nube de Microsoft.</p>
+                </div>
+                <div class="exp-item">
+                    <div class="item-header">
+                        <strong>RHCE & LPIC-1</strong>
+                        <span>2024</span>
+                    </div>
+                    <p style="font-size: 0.9rem; color: var(--text-light);">Ingeniero certificado de Red Hat y Administrador de Sistemas Linux.</p>
+                </div>
+                <div class="exp-item">
+                    <div class="item-header">
+                        <strong>Fortinet NSE 1 & 2</strong>
+                        <span>2020</span>
+                    </div>
+                    <p style="font-size: 0.9rem; color: var(--text-light);">Seguridad perimetral y fundamentos de ciberseguridad corporativa.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3>Stack Técnico</h3>
+            <div class="skills-grid">
+                <div class="skill-cat">
+                    <strong>Infraestructura & Ops</strong>
+                    <p>Ansible (IaC), Docker, Linux (RHEL/OEL), WebLogic, vSphere.</p>
+                </div>
+                <div class="skill-cat">
+                    <strong>Bases de Datos</strong>
+                    <p>Oracle DB (Expert), PL/SQL, Tuning de Performance, Dataguard.</p>
+                </div>
+                <div class="skill-cat">
+                    <strong>Cloud & Security</strong>
+                    <p>OCI, AWS (S3), MS Azure, Fortinet Firewall, Veeam Backup.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3>Formación Académica</h3>
+            <div class="edu-item">
+                <div class="item-header">
+                    <strong>ASIR: Administración de Sistemas y Redes</strong>
+                    <span>2013</span>
+                </div>
+                <span class="company">CFP Nova Caixa Galicia (Ourense)</span>
+            </div>
+            <div class="edu-item">
+                <div class="item-header">
+                    <strong>Equipos Electrónicos de Consumo</strong>
+                    <span>2011</span>
+                </div>
+                <span class="company">CIFP A Farixa (Ourense)</span>
+            </div>
+        </section>
+
+        <footer>
+            <p>Este documento es una versión digital optimizada. Consulta mi portfolio interactivo en: <strong>jjorgerodriguez.github.io/Portfolio</strong></p>
+        </footer>
+    </div>
+</body>
+</html>

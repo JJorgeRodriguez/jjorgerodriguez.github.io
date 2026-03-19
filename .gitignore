@@ -1,0 +1,10 @@
+# Excluir README.md según petición del usuario
+README.md
+
+# Otros archivos comunes
+.DS_Store
+Thumbs.db
+node_modules/
+.vscode/
+.idea/
+*.log
