@@ -1,4 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Dynamic Dates Update
+    const currentYear = new Date().getFullYear();
+    const expYears = currentYear - 2012; // Starting in 2012
+
+    // Update all elements with class 'exp-years'
+    document.querySelectorAll('.exp-years').forEach(el => {
+        el.textContent = expYears;
+    });
+
+    // Update all elements with class 'current-year'
+    document.querySelectorAll('.current-year').forEach(el => {
+        el.textContent = currentYear;
+    });
+
     // Theme Toggle
     const themeToggle = document.getElementById('theme-toggle');
     const htmlElement = document.documentElement;
