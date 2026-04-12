@@ -13,12 +13,16 @@ document.addEventListener('DOMContentLoaded', () => {
         el.textContent = currentYear;
     });
 
-    // Theme Toggle
     const themeToggle = document.getElementById('theme-toggle');
     const htmlElement = document.documentElement;
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-
+    
+    // Check for theme in URL first, then localStorage, defaulting to dark
+    const urlParams = new URLSearchParams(window.location.search);
+    const themeParam = urlParams.get('theme');
+    const savedTheme = themeParam || localStorage.getItem('theme') || 'dark';
+    
     htmlElement.setAttribute('data-theme', savedTheme);
+    if (themeParam) localStorage.setItem('theme', themeParam); // Persist forced theme
 
     themeToggle.addEventListener('click', () => {
         const currentTheme = htmlElement.getAttribute('data-theme');
